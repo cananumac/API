@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HotelProject.DataAccessLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20230718165853_InitialDb")]
+    [Migration("20230720141203_InitialDb")]
     partial class InitialDb
     {
         /// <inheritdoc />
