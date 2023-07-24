@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,6 +22,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HotelProject.EntityLayer\HotelProject.EntityLayer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Dtos\ServiceDto\" />
+    <Folder Include="Dtos\SubscribeDto\" />
+    <Folder Include="Dtos\StaffDto\" />
   </ItemGroup>
 
 </Project>
