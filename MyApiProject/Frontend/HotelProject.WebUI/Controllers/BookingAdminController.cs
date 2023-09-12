@@ -33,11 +33,10 @@ namespace HotelProject.WebUI.Controllers
             {
                 return View();
             }
-            //approvedReservationDto.Status = "Onaylandı.";
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(approvedReservationDto);
             StringContent stringContent= new StringContent(jsonData,Encoding.UTF8,"application/json");
-            var responseMessage = await client.PutAsync("http://localhost:5226/api/Booking/UpdateReservationStatusApproved", stringContent);
+            var responseMessage = await client.PutAsync("http://localhost:5226/api/Booking/UpdateReservationStatusApproved2", stringContent);
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");
