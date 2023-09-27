@@ -22,7 +22,8 @@ namespace WepApiJwt
                     ValidAudience = "http://localhost",
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("aspnetcoreapiapi")),
                     ValidateIssuerSigningKey = true,
-                    ValidateLifetime= true
+                    ValidateLifetime= true,
+                    ClockSkew= TimeSpan.Zero
                 };
             });
             builder.Services.AddControllers();
@@ -39,6 +40,7 @@ namespace WepApiJwt
                 app.UseSwaggerUI();
             }
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
 
